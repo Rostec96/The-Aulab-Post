@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArticleController;
@@ -13,12 +15,24 @@ class ArticleController extends Controller
     public function __construct(){
         $this->middleware('auth')->except('index','show');
     }
+
+
+    public function byCategory(Category $category){
+        $articles = $category->articles->sortByDesc('created_at');
+        return view('article.by-category', compact('category', 'articles'));
+    }
+
+    public function byuser(User $user){
+        $articles = $user->articles->sortByDesc('created_at');
+        return view('article.by-user', compact('user', 'articles'));
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = Article::orderBy('created_at', 'desc')->get();
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -59,7 +73,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

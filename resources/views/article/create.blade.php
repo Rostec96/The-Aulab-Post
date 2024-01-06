@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5 text-center">
+    <div class="shadow container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Inserisci il tuo articolo
@@ -23,7 +23,7 @@
                     </div>
                 @endif
 
-                <form class="card bg-success p-5 shadow" action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
+                <form class="card p-5 shadow" action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-3">
