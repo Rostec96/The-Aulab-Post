@@ -23,7 +23,7 @@
                     </div>
                 @endif
 
-                <form class="card bg-danger p-5 shadow" action="{{route('register')}}" method="POST">
+                <form class="card bg-warning p-5 shadow" action="{{route('register')}}" method="POST">
                     @csrf
 
                     <div class="mb-3">
