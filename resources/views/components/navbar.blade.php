@@ -14,11 +14,21 @@
             <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
           @auth
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
+
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @if (Auth::user()->is_admin)
+                <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard Admin</a></li>  
+              @endif
+              @if (Auth::user()->is_revisor)
+                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del revisore</a></li>  
+              @endif
               <li><a class="dropdown-item" href=""><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Profilo</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();"><i class="text-info bi bi-person-raised-hand p-2 fs-4"></i>Logout</a></li>

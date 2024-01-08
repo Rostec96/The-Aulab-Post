@@ -22,6 +22,11 @@
                 <p>{{$article->body}}</p>
                 <div class="text-center">
                     <a href="{{route('article.index')}}" class="btn btn-info my-5">Torna indietro</a>
+
+                    @if (Auth::user() && Auth::user()->is_revisor)
+                        <a href="{{route('article.acceptArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Accetta l'articolo</a>
+                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Rifiuta l'articolo</a>
+                    @endif
                 </div>
             </div>
         </div>

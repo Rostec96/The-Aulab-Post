@@ -6,7 +6,7 @@
         </div>
     @endif
     
-    <div class="shadow container-fluids p-5 m-4 text-center">
+    <div class="shadow container-fluid p-5 m-4 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 The Aulab Post
