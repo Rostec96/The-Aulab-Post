@@ -51,8 +51,8 @@
           @endguest
         </ul>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search">
+        <form class="d-flex" method="GET" action="{{route('article.search')}}">
+          <input class="form-control me-2" type="search" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
           <button type="submit"><span>Cerca</span></button>
         </form>
       </div>

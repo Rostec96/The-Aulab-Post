@@ -80,6 +80,13 @@ class ArticleController extends Controller
         return view('article.show', compact('article'));
     }
 
+    public function articleSearch(Request $request){
+
+        $query= $request->input('query');
+        $articles= Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('article.search-index', compact('articles','query'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

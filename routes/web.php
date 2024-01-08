@@ -19,6 +19,12 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
+Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+
+Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
+
+
+
 Route::middleware('writer')->group(function(){
 
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
@@ -34,9 +40,8 @@ Route::get('/article/category/{category}', [ArticleController::class, 'byCategor
 
 Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('article.byUser');
 
-Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
 
-Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -47,6 +52,7 @@ Route::middleware('admin')->group(function(){
     
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 });
+
 
 Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
