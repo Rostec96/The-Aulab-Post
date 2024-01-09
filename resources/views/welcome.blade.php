@@ -34,8 +34,8 @@
                             @endif
 
                         </div>
-
-
+                        <span class="small text-muted fst-italic text-capitalize">- tempo di lettura {{$article->readDuration()}} min</span>
+                        <hr>
                         <p class="small text-capitalize">
                             @foreach($article->tags as $tag)
                                 #{{$tag->name}}

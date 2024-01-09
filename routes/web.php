@@ -44,7 +44,7 @@ Route::middleware('writer')->group(function(){
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
 
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
