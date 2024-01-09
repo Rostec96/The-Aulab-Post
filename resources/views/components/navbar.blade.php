@@ -26,9 +26,15 @@
               @if (Auth::user()->is_admin)
                 <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard Admin</a></li>  
               @endif
+
               @if (Auth::user()->is_revisor)
                 <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del revisore</a></li>  
               @endif
+
+              @if (Auth::user()->is_writer)
+                <li><a class="dropdown-item" href="{{route('writer.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del redattore</a></li>  
+              @endif
+              
               <li><a class="dropdown-item" href=""><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Profilo</a></li>
               <li><a class="dropdown-item" href="{{route('careers')}}"><i class="text-info bi bi-briefcase-fill p-2 fs-4"></i>Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
