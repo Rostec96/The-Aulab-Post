@@ -14,6 +14,11 @@
                 <img src="{{Storage::url($article->image)}}" class="img-fluid my-3" alt="post">
                 <div class="text-center">
                     <h2 class="card-text">{{$article->subtitle}}</h2>
+                    <p class="small fst-italic text-capitalize">
+                        @foreach ($article->tags as $tag)
+                            #{{$tag->name}}
+                        @endforeach
+                    </p>
                     <div class="my-3 text-muted fst-italic">
                         <p>Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
                     </div>                    

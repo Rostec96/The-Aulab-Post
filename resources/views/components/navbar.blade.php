@@ -15,7 +15,7 @@
           </li>
           @auth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('careers')}}">Lavora con noi</a>
+            <a class="nav-link" href="{{route('article.index')}}">Tutti gli articoli</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,6 +30,7 @@
                 <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del revisore</a></li>  
               @endif
               <li><a class="dropdown-item" href=""><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Profilo</a></li>
+              <li><a class="dropdown-item" href="{{route('careers')}}"><i class="text-info bi bi-briefcase-fill p-2 fs-4"></i>Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();"><i class="text-info bi bi-person-raised-hand p-2 fs-4"></i>Logout</a></li>
               <form method="post" action="{{route('logout')}}" id="form-logout" class="d-none">
