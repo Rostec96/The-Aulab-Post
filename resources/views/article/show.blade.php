@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5 shadow">
         <div class="row justify-content-around">
             <div class="col-12 col-md-8">
                 <img src="{{Storage::url($article->image)}}" class="img-fluid my-3" alt="post">
@@ -30,7 +30,7 @@
 
                     @if (Auth::user() && Auth::user()->is_revisor)
                         <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Accetta l'articolo</a>
-                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Rifiuta l'articolo</a>
+                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-danger btn-outline-warning">Rifiuta l'articolo</a>
                     @endif
                 </div>
             </div>

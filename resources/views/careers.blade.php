@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="card-work container my-5">
         <div class="row justify-content-center align-items-center border rounded p-2">
 
             <div class="col-12 col-md-6">

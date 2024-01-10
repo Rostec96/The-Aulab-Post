@@ -2,7 +2,7 @@
     <div class="shadow container-fluid p-5 m-4 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
-                Bentornato, Revisore
+                Bentornato Revisore
             </h1>
         </div>
     </div>

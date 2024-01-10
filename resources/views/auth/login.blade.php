@@ -36,7 +36,7 @@
                       <input name="password" type="password" class="form-control" placeholder="..." id="password">
                     </div>
                     <div class="mt-2">
-                       <button class="fw-bold" type="submit">Accedi</button>
+                       <button class="fw-bold" type="submit"><span>Accedi</span></button>
                         <p class="fw-bold small mt-2">Non sei registrato? <a href="{{route('register')}}" class="fw-bold text-dark">Clicca qui</a></p>
                     </div>
                   </form>

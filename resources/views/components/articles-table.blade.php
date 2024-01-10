@@ -1,5 +1,5 @@
-<table class="table table-striped table-hover border">
-    <thead class="table-dark">
+<table class="table table-dark table-striped table-hover border">
+    <thead class="table-danger">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
@@ -19,7 +19,7 @@
                 @if (is_null($article->is_accepted))
                     <a href="{{route('article.show', compact('article'))}}" class="btn btn-warning btn-outline-danger">Leggi l'articolo</a>
                 @else
-                    <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Riporta in revisione</a>
+                    <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-danger btn-outline-warning">Riporta in revisione</a>
                 @endif
             </td>
         </tr>

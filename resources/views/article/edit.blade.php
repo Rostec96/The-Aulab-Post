@@ -67,7 +67,7 @@
                       </div>
 
                     <div class="mt-2">
-                       <button class="fw-bold text-white" type="submit">Inserisci articolo</button>
+                       <button class="fw-bold text-white" type="submit"><span>Inserisci articolo</span></button>
                        <a class="btn bg-warning btn-outline-danger" href="{{route('homepage')}}">Torna alla Home</a></p>
                     </div>
                   </form>

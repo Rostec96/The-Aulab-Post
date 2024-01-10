@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="mt-2">
-                       <button class="fw-bold" type="submit">Registrati</button>
+                       <button class="fw-bold" type="submit"><span>Registrati</span></button>
                         <p class="fw-bold small mt-2">Sei già registrato?<a class="fw-bold text-dark" href="{{route('login')}}">Clicca qui</a></p>
                     </div>
                   </form>

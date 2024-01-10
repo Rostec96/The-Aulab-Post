@@ -1,5 +1,5 @@
-<table class="table table-striped table-hover border">
-    <thead class="table-dark">
+<table class="table table-dark table-striped table-hover border">
+    <thead class="table-secondary">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nome</th>
@@ -16,13 +16,13 @@
             <td>
               @switch($role)
                   @case('amministratore')
-                    <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-warning btn-outline-danger">Attiva {{$role}}</a>
+                    <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
                   @break
                   @case('revisore')
-                    <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-warning btn-outline-danger">Attiva {{$role}}</a>
+                    <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
                   @break
                   @case('redattore')
-                    <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-warning btn-outline-danger">Attiva {{$role}}</a>
+                    <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
                   @break                      
               @endswitch
             </td>

@@ -34,16 +34,15 @@
                             @endif
 
                         </div>
-                        <span class="small text-muted fst-italic text-capitalize">- tempo di lettura {{$article->readDuration()}} min</span>
-                        <hr>
-                        <p class="small text-capitalize">
+                        <span class="mx-4 small text-muted fst-italic text-capitalize">- tempo di lettura {{$article->readDuration()}} min</span>
+                        <p class="mx-4 small text-capitalize">
                             @foreach($article->tags as $tag)
                                 #{{$tag->name}}
                             @endforeach
                         </p> 
 
-                        <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                            Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', ['user'=> $article->user->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->user->name}}</a>
+                        <div class="card-footer text-muted d-flex justify-content-around align-items-center">
+                            Redatto il {{$article->created_at->format('d/m/Y')}} da <a href="{{route('article.byUser', ['user'=> $article->user->id])}}" class="small text-muted fst-italic text-capitalize"> {{$article->user->name}}</a>
                             <a href="{{route('article.show', compact('article'))}}" class="btn btn-success fw-bold">Leggi</a>
                         </div>
                     </div>

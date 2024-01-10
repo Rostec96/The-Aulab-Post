@@ -1,7 +1,7 @@
 :root{
+    --bg-testo:#f2e9e4;
+    --bg-all:#c9ada7;
     --testo:#4a4e69;
-    --bg-testo:#c9ada7;
-    --bg-all:#f2e9e4;
 }
 
 *{
@@ -10,7 +10,25 @@
 }
 
 body{
-    background-color: var(--bg-all);
+    background-image: url(/public/storage/image/newspaper.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card{
+  background-image: url(/public/storage/image/card.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.card-work{
+    background-image: url(/public/storage/image/card.jpeg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
 }
 
 button {

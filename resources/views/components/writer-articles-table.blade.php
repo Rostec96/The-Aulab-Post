@@ -1,5 +1,5 @@
-<table class="table table-striped table-hover border">
-    <thead class="table-dark">
+<table class="table table-dark table-striped table-hover border">
+    <thead class="table-success">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titolo</th>

@@ -1,5 +1,5 @@
-<table class="table table-striped table-hover border">
-    <thead class="table-dark">
+<table class="table table-success table-striped table-hover border">
+    <thead class="table-primary">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Nome Tag</th>
@@ -20,14 +20,14 @@
                     @csrf
                     @method('put')
                       <input name="name" type="text" class="form-control d-inline w-50" placeholder="Nuovo nome tag">
-                      <button type="submit">Aggiorna</button>
+                      <button type="submit"><span>Aggiorna</span></button>
                 </form>
             </td>        
             <td>
                 <form action="{{route('admin.deleteTag', ['tag'=> $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                        <button type="submit" class="btn-warning btn-outline-danger">Elimina</button>
+                        <button type="submit"><span>Elimina</span></button>
                 </form>
             </td>    
             @else 
@@ -36,14 +36,14 @@
                     @csrf
                     @method('put')
                       <input name="name" type="text" class="form-control d-inline w-50" placeholder="Nuovo nome">
-                      <button type="submit">Aggiorna</button>
+                      <button type="submit"><span>Aggiorna</span></button>
                 </form>
             </td>        
             <td>
                 <form action="{{route('admin.deleteCategory', ['category'=> $metaInfo])}}" method="POST">
                     @csrf
                     @method('delete')
-                        <button type="submit" class="btn-warning btn-outline-danger">Elimina</button>
+                        <button type="submit"><span>Elimina</span></button>
                 </form>
             </td>    
             @endif
