@@ -8,6 +8,11 @@
         </div>
     </div>
 
+    @if (session('message'))
+    <div class="alert alert-success text-center">
+        {{session('message')}}
+    </div>
+    @endif
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -30,16 +35,19 @@
                     <div class="mb-3">
                       <label for="title" class="fw-bold form-label">Titolo: </label>
                       <input name="title" type="text" class="form-control" id="title" value="{{$article->title}}">
+                      <span class="small fst-italic">*Almeno 3 parole</span>
                     </div>
 
                     <div class="mb-3">
                         <label for="subtitle" class="fw-bold form-label">Sottotitolo: </label>
                         <input name="subtitle" type="text" class="form-control" id="subtitle" value="{{$article->subtitle}}">
+                        <span class="small fst-italic">*Almeno 3 parole</span>
                     </div>
   
                     <div class="mb-3">
                       <label for="image" class="fw-bold form-label">Immagine: </label>
                       <input name="image" type="file" class="form-control" id="image">
+                      <span class="small fst-italic">*Accetta formati .jpeg</span>
                     </div>
 
                     <div class="mb-3">
@@ -53,22 +61,24 @@
                                     >{{$category->name}}</option>
                             @endforeach
                         </select>
+                        <span class="small fst-italic">*Obbligatoria</span>
                     </div>
 
                     <div class="mb-3">
                         <label for="body" class="fw-bold form-label">Corpo dell'articolo: </label>
                         <textarea name="body" class="form-control" id="body" cols="30" rows="7">{{old('body')}}</textarea>
+                        <span class="small fst-italic">*Almeno 100 caratteri</span>
                     </div>
 
                     <div class="mb-3">
                         <label for="tags" class="fw-bold form-label">Tags: </label>
                         <input name="tags" class="form-control" id="tags" value="{{$article->tags->implode('name', ', ')}}">
-                        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                        <span class="small fst-italic">*Dividi ogni tag con una virgola</span>
                       </div>
 
                     <div class="mt-2">
                        <button class="fw-bold text-white" type="submit"><span>Inserisci articolo</span></button>
-                       <a class="btn bg-warning btn-outline-danger" href="{{route('homepage')}}">Torna alla Home</a></p>
+                       <a class="btn bg-success" href="{{route('homepage')}}">Torna alla Home</a></p>
                     </div>
                   </form>
 

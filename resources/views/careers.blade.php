@@ -32,6 +32,12 @@
                 @endif
             </div>
 
+            @if (session('mail'))
+            <div class="alert alert-info text-center">
+                {{session('mail')}}
+            </div>
+            @endif
+
             <form class="p-5" action="{{route('careers.submit')}}" method="POST">
                 @csrf
 

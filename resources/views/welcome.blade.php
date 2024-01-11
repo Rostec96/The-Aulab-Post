@@ -8,6 +8,12 @@
         </div>
     </div>
 
+    @if (session('mail'))
+        <div class="alert alert-info text-center">
+            {{session('mail')}}
+        </div>
+    @endif
+
     <div class="container my-5 bg-transparent ">
         <div class="row justify-content-center">
             @foreach ($articles as $article)

@@ -32,7 +32,7 @@ class RevisorController extends Controller
             'is_accepted' => false,
         ]);
 
-        return redirect(route('revisor.dashboard'))->with('message', 'Hai rifiutato l\'articolo scelto.');
+        return redirect(route('revisor.dashboard'))->with('delete', 'Hai rifiutato l\'articolo scelto.');
     }
 
     public function undoArticle(Article $article){
@@ -40,6 +40,6 @@ class RevisorController extends Controller
             'is_accepted' => NULL,
         ]);
 
-        return redirect(route('revisor.dashboard'))->with('message', 'Hai riportato l\'articolo scelto in revisione.');
+        return redirect(route('revisor.dashboard'))->with('revision', 'Hai riportato l\'articolo scelto in revisione.');
     }
 }

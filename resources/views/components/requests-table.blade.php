@@ -17,13 +17,13 @@
               <td>
                 @switch($role)
                     @case('amministratore')
-                      <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
+                      <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-info">Attiva {{$role}}</a>
                     @break
                     @case('revisore')
-                      <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
+                      <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-info">Attiva {{$role}}</a>
                     @break
                     @case('redattore')
-                      <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-success btn-outline-info">Attiva {{$role}}</a>
+                      <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info">Attiva {{$role}}</a>
                     @break                      
                 @endswitch
               </td>

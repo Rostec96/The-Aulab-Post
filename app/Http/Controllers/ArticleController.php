@@ -16,7 +16,7 @@ class ArticleController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth')->except('index','show');
+        $this->middleware('auth')->except('index','show','byCategory','byUser','articleSearch');
     }
 
 
@@ -175,6 +175,6 @@ class ArticleController extends Controller
 
        $article->delete();
 
-       return redirect(route('writer.dashboard'))->with('message', 'Hai cancellato correttamente l\'articolo.');
+       return redirect(route('writer.dashboard'))->with('delete', 'Hai cancellato correttamente l\'articolo.');
     }
 }

@@ -13,6 +13,18 @@
     </div>
 @endif
 
+@if (session('delete'))
+<div class="alert alert-danger text-center">
+    {{session('delete')}}
+</div>
+@endif
+
+@if (session('revision'))
+<div class="alert alert-warning text-center">
+    {{session('revision')}}
+</div>
+@endif
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12">

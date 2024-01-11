@@ -11,12 +11,12 @@
     <div class="container my-5 bg-transparent">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
-            <div class="col-12 my-5">
-                <div class="row my-5">
-                    <div class="col-4 col-md-4">
+            <div class="col-12 my-5 justify-content-center">
+                <div class="row my-5 justify-content-around">
+                    <div class="col-12 col-md-4">
                         <img src="{{Storage::url($article->image)}}" class="img-fluid" alt="post">
                     </div>
-                    <div class="col-6 col-md-5 card-work">
+                    <div class="col-12 col-md-5 card-work">
                         <div class="card-body">
                             <h5 class="card-title">{{$article->title}}</h5>
                             <p class="card-text">{{$article->subtitle}}</p>

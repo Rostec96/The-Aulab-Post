@@ -13,6 +13,12 @@
     </div>
 @endif
 
+@if (session('delete'))
+<div class="alert alert-danger text-center">
+    {{session('delete')}}
+</div>
+@endif
+
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>

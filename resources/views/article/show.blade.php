@@ -10,7 +10,7 @@
 
             <div class="container my-5 bg-transparent">
                 <div class="row justify-content-center">
-                    <div class="col-12 my-5">
+                    <div class="col-12 my-5 d-flex justify-content-center">
                         <img src="{{Storage::url($article->image)}}" class="img-fluid my-3" alt="post">
                     </div>
                     <div class="col-12 card-work">
@@ -31,10 +31,10 @@
 
                         <p>{{$article->body}}</p>
                         <div class="text-center">
-                            <a href="{{route('article.index')}}" class="btn btn-info my-5">Torna indietro</a>
+                            <a href="{{route('article.index')}}" class="btn btn-success my-5">Torna indietro</a>
                                 @if (Auth::user() && Auth::user()->is_revisor)
-                                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-warning btn-outline-danger">Accetta l'articolo</a>
-                                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-danger btn-outline-warning">Rifiuta l'articolo</a>
+                                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-warning">Accetta l'articolo</a>
+                                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-danger">Rifiuta l'articolo</a>
                                 @endif
                         </div>
                     </div>

@@ -20,6 +20,8 @@ class Article extends Model
             'title'=> $this->title,
             'body'=> $this->body,
             'category'=> $this->category,
+            'user'=> $this->user,
+            'subtitle'=> $this->subtitle,
         ];
     } 
     

@@ -10,10 +10,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
+
+          @auth
           <li class="nav-item">
             <a class="nav-link" href="{{route('article.create')}}">Inserisci un articolo</a>
           </li>
-          @auth
           <li class="nav-item">
             <a class="nav-link" href="{{route('article.index')}}">Tutti gli articoli</a>
           </li>

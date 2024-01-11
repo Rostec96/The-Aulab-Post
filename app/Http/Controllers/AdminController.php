@@ -61,7 +61,7 @@ class AdminController extends Controller
 
         $tag->delete();
 
-        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato il tag.');
+        return redirect(route('admin.dashboard'))->with('delete', 'Hai correttamente eliminato il tag.');
     }
 
 
@@ -83,7 +83,7 @@ class AdminController extends Controller
 
          $category->delete();
  
-         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato la categoria.');
+         return redirect(route('admin.dashboard'))->with('delete', 'Hai correttamente eliminato la categoria.');
      }
 
     public function storeCategory(Request $request){
