@@ -16,11 +16,14 @@ body{
     background-size: cover;
 }
 
-.card{
-  background-image: url(/public/storage/image/card.jpeg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
+.dv-head{
+  background-color: rgba(148, 142, 138, 0.301);
+}
+
+img{
+  border: 5px;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .card-work{
@@ -28,6 +31,9 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    border:10px dashed var(--bg-testo);
+    border-radius: 30px;
+    padding: 10px;
 
 }
 

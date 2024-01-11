@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="shadow container-fluid p-5 text-center">
+    <div class="dv-head container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Registrati
