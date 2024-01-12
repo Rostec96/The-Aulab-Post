@@ -15,8 +15,14 @@
     @endif
 
     @if (session('message'))
-    <div class="alert alert-danger text-center">
+    <div class="alert alert-success text-center">
         {{session('message')}}
+    </div>
+    @endif 
+
+    @if (session('accessdenied'))
+    <div class="alert alert-danger text-center">
+        {{session('accessdenied')}}
     </div>
     @endif 
 
