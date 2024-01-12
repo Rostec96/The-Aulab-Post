@@ -45,9 +45,14 @@ class ArticleController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(User $user)
     {
-        return view('article.create');
+        if(Auth::user()->is_writer){
+            return view('article.create');
+        }else {
+            
+            return redirect(route('homepage'))->with('unauthorized','Non sei autorizzato');
+        }
     }
 
     /**

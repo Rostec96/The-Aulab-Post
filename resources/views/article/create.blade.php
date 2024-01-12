@@ -23,12 +23,6 @@
                     </div>
                 @endif
 
-                @if (session('message'))
-                <div class="alert alert-success text-center">
-                    {{session('message')}}
-                </div>
-                @endif
-
                 <form class="card bg-warning p-5 shadow" action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 

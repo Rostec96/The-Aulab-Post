@@ -14,6 +14,18 @@
         </div>
     @endif
 
+    @if (session('unauthorized'))
+    <div class="alert alert-danger text-center">
+        {{session('unauthorized')}}
+    </div>
+    @endif
+
+    @if (session('message'))
+    <div class="alert alert-success text-center">
+        {{session('message')}}
+    </div>
+    @endif
+
     <div class="container my-5 bg-transparent ">
         <div class="row justify-content-center">
             @foreach ($articles as $article)
