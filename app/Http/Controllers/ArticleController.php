@@ -51,7 +51,7 @@ class ArticleController extends Controller
             return view('article.create');
         }else {
             
-            return redirect(route('homepage'))->with('unauthorized','Non sei autorizzato');
+            return redirect(route('homepage'))->with('message','Non sei autorizzato');
         }
     }
 

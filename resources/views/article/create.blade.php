@@ -47,6 +47,7 @@
                     <div class="mb-3">
                         <label for="category" class="fw-bold form-label">Categoria: </label>
                         <select name="category" class="form-control text-capitalize" id="category">
+                            <option value="">Seleziona...</option>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                             @endforeach
