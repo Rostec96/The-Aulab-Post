@@ -20,6 +20,7 @@ class Article extends Model
             'title'=> $this->title,
             'subtitle'=> $this->subtitle,
             'body'=> $this->body,
+            'tags'=> $this->tags,
             'category'=> $this->category,
             'user'=> $this->user,
         ];
