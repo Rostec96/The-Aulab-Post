@@ -23,7 +23,11 @@
                             <p class="card-text">{{$article->subtitle}}</p>
                             @if ($article->category)
                                 <a href="{{route('article.byCategory', ['category'=> $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
-                            @endif
+                            @else
+                                <p class="small text-muted fst-italic text-capitalize">
+                                    Non categorizzata
+                                </p>
+                                @endif
                             <span class="mx-4 small text-muted fst-italic text-capitalize">- tempo di lettura {{$article->readDuration()}} min</span>
                             <p class="mx-4 small fst-italic text-capitalize">
                             @foreach ($article->tags as $tag)

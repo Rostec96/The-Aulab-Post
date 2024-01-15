@@ -23,7 +23,7 @@
                             @endforeach
                             </p>
                             <div class="my-3 text-muted fst-italic">
-                                <p>Redatto da {{$article->user->name}} il {{$article->created_at->format('d/m/Y')}}</p>
+                                <p>Redatto da {{Auth::user()->name}} il {{$article->created_at->format('d/m/Y')}}</p>
                             </div>                    
                         </div>
 

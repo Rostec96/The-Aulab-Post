@@ -28,7 +28,7 @@
                     </div>
                 @endif
 
-                <form class="card p-5 shadow" action="{{route('article.update', compact('article'))}}" method="post" enctype="multipart/form-data">
+                <form class="card bg-info p-5 shadow" action="{{route('article.update', compact('article'))}}" method="post" enctype="multipart/form-data">
                     @method('put')
                     @csrf
 
