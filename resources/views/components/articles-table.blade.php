@@ -15,7 +15,7 @@
                 <th scope="row">{{$article->id}}</th>
                 <td>{{$article->title}}</td>
                 <td>{{$article->subtitle}}</td>
-                <td>{{Auth::user()->name}}</td>
+                <td>{{$article->user->name}}</td>
                 <td>
                     @if (is_null($article->is_accepted))
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-success">Leggi l'articolo</a>
