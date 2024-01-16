@@ -50,7 +50,7 @@ h5{
 }
 
 body{
-    background-image: url(/public/storage/image/newspaper.jpeg);
+    background-image: url(./newspaper.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,7 +67,7 @@ img{
 }
 
 .card-work{
-    background-image: url(/public/storage/image/card.jpeg);
+    background-image: url(./card.jpeg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
