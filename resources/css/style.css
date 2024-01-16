@@ -4,9 +4,49 @@
     --testo:#4a4e69;
 }
 
+@font-face {
+  font-family: DancingScript;
+  src: url(./DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: InstrumentSerif;
+  src: url(./InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: Rye;
+  src: url(./Rye-Regular.ttf);
+}
+
+@font-face {
+  font-family: SpecialElite;
+  src: url(./SpecialElite-Regular.ttf);
+}
+
+nav{
+  font-family: SpecialElite;
+  height: max-content;
+}
+
+h1{
+  font-family: Rye;
+}
+
+h5{
+    font-family: InstrumentSerif;
+}
+
+.card-body{
+  font-family: DancingScript;
+}
+
 *{
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--testo);
+  color: var(--testo);
+}
+
+.color-icon{
+  color: var(--testo);
 }
 
 body{

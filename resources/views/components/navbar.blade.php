@@ -25,22 +25,21 @@
 
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             
-              <li><a class="dropdown-item" href=""><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Profilo</a></li>
               @if (Auth::user()->is_admin)
-                <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard Admin</a></li>  
+                <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="color-icon bi bi-person-vcard p-2 fs-4"></i>Dashboard Admin</a></li>  
               @endif
 
               @if (Auth::user()->is_revisor)
-                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del revisore</a></li>  
+                <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}"><i class="color-icon bi bi-person-vcard p-2 fs-4"></i>Dashboard del revisore</a></li>  
               @endif
 
               @if (Auth::user()->is_writer)
-                <li><a class="dropdown-item" href="{{route('writer.dashboard')}}"><i class="text-info bi bi-person-vcard p-2 fs-4"></i>Dashboard del redattore</a></li>  
+                <li><a class="dropdown-item" href="{{route('writer.dashboard')}}"><i class="color-icon bi bi-person-vcard p-2 fs-4"></i>Dashboard del redattore</a></li>  
               @endif
 
-              <li><a class="dropdown-item" href="{{route('careers')}}"><i class="text-info bi bi-briefcase-fill p-2 fs-4"></i>Lavora con noi</a></li>
+              <li><a class="dropdown-item" href="{{route('careers')}}"><i class="color-icon bi bi-briefcase-fill p-2 fs-4"></i>Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();"><i class="text-info bi bi-person-raised-hand p-2 fs-4"></i>Logout</a></li>
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();"><i class="color-icon bi bi-person-raised-hand p-2 fs-4"></i>Logout</a></li>
               <form method="post" action="{{route('logout')}}" id="form-logout" class="d-none">
                 @csrf
               </form>
