@@ -1,0 +1,44 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-TqycWyKO.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-bb42NSi8.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/css/DancingScript-VariableFont_wght.ttf": {
+    "file": "assets/DancingScript-VariableFont_wght-zWbBa7wD.ttf",
+    "src": "resources/css/DancingScript-VariableFont_wght.ttf"
+  },
+  "resources/css/InstrumentSerif-Regular.ttf": {
+    "file": "assets/InstrumentSerif-Regular-9n4LaFpY.ttf",
+    "src": "resources/css/InstrumentSerif-Regular.ttf"
+  },
+  "resources/css/Rye-Regular.ttf": {
+    "file": "assets/Rye-Regular-QMB_Nnbo.ttf",
+    "src": "resources/css/Rye-Regular.ttf"
+  },
+  "resources/css/SpecialElite-Regular.ttf": {
+    "file": "assets/SpecialElite-Regular-pafXAj2b.ttf",
+    "src": "resources/css/SpecialElite-Regular.ttf"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-UGkLWqbb.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/card.jpeg": {
+    "file": "assets/card-wCy98eSO.jpeg",
+    "src": "resources/css/card.jpeg"
+  },
+  "resources/css/newspaper.jpeg": {
+    "file": "assets/newspaper-zp1iSOVE.jpeg",
+    "src": "resources/css/newspaper.jpeg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-NwnD2K31.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
